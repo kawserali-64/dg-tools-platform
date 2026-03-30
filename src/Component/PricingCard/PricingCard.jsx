@@ -2,7 +2,13 @@ import React from 'react';
 
 const PricingCard = () => {
     return (
-        <div className='grid grid-cols-3 container mx-auto justify-between items-center  border'>
+        <div className='mt-32'>
+            <div className='text-center'>
+                <h1 className='font-bold text-black text-4xl '>Simple, Transparent Pricing</h1>
+                <p className='text-[#627382] mt-4'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+            </div>  
+        
+        <div className='grid grid-cols-3 container mx-auto justify-between items-center '>
 
             <div className="card w-96 mt-8 bg-[#F9FAFC]  shadow-sm">
                 <div className="card-body">
@@ -124,6 +130,7 @@ const PricingCard = () => {
 
 
         </div>
+    </div>
     );
 };
 

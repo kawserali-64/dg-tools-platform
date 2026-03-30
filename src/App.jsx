@@ -4,6 +4,7 @@ import Footer from './Component/Footer/Footer'
 import NavBar from './Component/NavBar/NavBar'
 import PricingCard from './Component/PricingCard/PricingCard'
 import Rating from './Component/Rating/Rating'
+import Workflow from './Component/Workflow/Workflow'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Banner></Banner>
       <Rating></Rating>
       <PricingCard></PricingCard>
+      <Workflow></Workflow>
       <Footer></Footer>
 
     </>
