@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 const DisplayCard = ({ card, setCartselected, cartselected }) => {
     const [isSelected, setSelected] = useState(false);
 
+
     return (
         <div className="card w-96 bg-base-100 shadow-sm">
+            <ToastContainer></ToastContainer>
+            
             <div className="card-body">
                 <span className="badge badge-xs badge-warning ml-auto">{card.tag}</span>
 
@@ -47,6 +51,7 @@ const DisplayCard = ({ card, setCartselected, cartselected }) => {
                             const exists = cartselected.find(item => item.id === card.id);
 
                             if (!exists) {
+                                toast.success('Card added')
                                 setCartselected([...cartselected, card]);
                                 setSelected(true);
                             }

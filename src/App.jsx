@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Component/Banner/Banner'
 import Card from './Component/Card/Card'
@@ -14,27 +14,39 @@ const fetchCard = async () => {
   const res = await fetch("/DataCard.json")
   return res.json()
 }
+
 function App() {
+  const [cart, setCart] = useState([])
+
+  const addToCard = (product) => {
+    setCart(prev => [...prev, product])
+  }
+
   const cardPromise = fetchCard()
+
   return (
     <>
+      <NavBar cartCount={cart.length} />
+      <Banner />
+      <Rating />
 
-      <NavBar></NavBar>
-      <Banner></Banner>
-      <Rating></Rating>
-
-      <Suspense fallback={<div className="flex justify-center items-center h-64">
-        <span className="loading loading-spinner loading-xl"></span>
-      </div>}
-      >
-        <Card cardPromise={cardPromise}></Card>
+      <Suspense fallback={
+        <div className="flex justify-center items-center h-64">
+          <span className="loading loading-spinner loading-xl"></span>
+        </div>
+      }>
+        <Card 
+          cardPromise={cardPromise} 
+          addToCard={addToCard} 
+          cartselected={cart} 
+          setCartselected={setCart} 
+        />
       </Suspense>
 
-      <GetSteps></GetSteps>
-      <PricingCard></PricingCard>
-      <Workflow></Workflow>
-      <Footer></Footer>
-
+      <GetSteps />
+      <PricingCard />
+      <Workflow />
+      <Footer />
     </>
   )
 }
