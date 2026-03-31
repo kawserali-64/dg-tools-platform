@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Free",
+    "description": "Basic access for beginners",
+    "price": 0,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "5+ templates",
+      "Basic support",
+      "Export to PDF"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
+  },
+  {
+    "id": 2,
+    "name": "Starter",
+    "description": "Good for individuals getting started",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "20+ templates",
+      "Basic customization",
+      "Email support"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+  },
+  {
+    "id": 3,
+    "name": "Basic",
+    "description": "For regular users",
+    "price": 15,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "50+ templates",
+      "ATS optimization",
+      "Export to PDF & Word"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/190/190411.png"
+  },
+  {
+    "id": 4,
+    "name": "Pro",
+    "description": "Advanced tools for professionals",
+    "price": 29,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "Priority support",
+      "Advanced customization"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+  },
+  {
+    "id": 5,
+    "name": "Premium",
+    "description": "Best for power users",
+    "price": 49,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Unlimited templates",
+      "1-click export",
+      "Premium designs"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/3064/3064197.png"
+  },
+  {
+    "id": 6,
+    "name": "Team",
+    "description": "For small teams collaboration",
+    "price": 79,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Team access",
+      "Shared workspace",
+      "Collaboration tools"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/921/921347.png"
+  },
+  {
+    "id": 7,
+    "name": "Enterprise",
+    "description": "Full solution for large businesses",
+    "price": 149,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Unlimited everything",
+      "Dedicated support",
+      "Custom branding"
+    ],
+    "icon": "https://cdn-icons-png.flaticon.com/512/2331/2331940.png"
+  }
+]
