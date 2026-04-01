@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import { ShoppingCart } from 'lucide-react';
 
 const CartBtn = ({ cartselected, setCartselected }) => {
 
@@ -11,14 +12,19 @@ const CartBtn = ({ cartselected, setCartselected }) => {
 
     return (
         <div className="space-y-4 container mx-auto mt-4">
-    <ToastContainer />
 
-    {/* শুধু দেখাবে যদি Cart এ কিছু থাকে */}
     {cartselected.length > 0 && (
         <div>
             <h2 className='font-bold text-3xl'>Your Card</h2>
         </div>
     )}
+   {cartselected.length === 0 && (
+    <div className="flex justify-center items-center h-64 flex-col gap-3 text-gray-400">
+        <ShoppingCart size={50} />
+        <p>Your cart is empty</p>
+    </div>
+)}
+    
 
     {cartselected.map((selectCart) => (
         <div key={selectCart.id} className="cart-item flex gap-4 items-center border p-2 rounded">
@@ -43,7 +49,6 @@ const CartBtn = ({ cartselected, setCartselected }) => {
         </div>
     ))}
 
-    {/* Total + Checkout button */}
     {cartselected.length > 0 && (
         <div className="container mx-auto mt-6">
             <div className="flex justify-between items-center font-bold text-lg border-b pb-2">

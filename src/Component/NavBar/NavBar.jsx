@@ -4,12 +4,12 @@ import { ShoppingCart } from 'lucide-react';
 const NavBar = ({cartCount}) => {
     
     return (
-            <div className="navbar bg-base-100 shadow-sm justify-around">
+            <div className="navbar bg-base-100 shadow-sm justify-around sticky top-0 z-50">
                 <div className="">
                     <h1 className="text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</h1>
                 </div>
 
-                <div className="flex">
+                <div className="md:flex hidden">
                     <ul className="menu menu-horizontal px-1">
                         <li><a>Products</a></li>
                         <li><a>Features</a></li>

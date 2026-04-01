@@ -8,6 +8,7 @@ import NavBar from './Component/NavBar/NavBar'
 import PricingCard from './Component/PricingCard/PricingCard'
 import Rating from './Component/Rating/Rating'
 import Workflow from './Component/Workflow/Workflow'
+import { ToastContainer } from 'react-toastify'
 
 
 const fetchCard = async () => {
@@ -25,7 +26,10 @@ function App() {
   const cardPromise = fetchCard()
 
   return (
+    
     <>
+            <ToastContainer />
+
       <NavBar cartCount={cart.length} />
       <Banner />
       <Rating />

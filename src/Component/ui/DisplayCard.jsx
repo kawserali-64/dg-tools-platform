@@ -7,10 +7,21 @@ const DisplayCard = ({ card, setCartselected, cartselected }) => {
 
     return (
         <div className="card w-96 bg-base-100 shadow-sm">
-            <ToastContainer></ToastContainer>
-            
+
             <div className="card-body">
-                <span className="badge badge-xs badge-warning ml-auto">{card.tag}</span>
+
+                <span
+                    className={`badge badge-xs ml-auto 
+                    ${card.tag === "popular" ? "badge-warning" : ""}
+                    ${card.tag === "new" ? "badge-success" : ""}
+                    ${card.tag === "premium" ? "badge-secondary" : ""}
+                    ${card.tag === "best seller" ? "badge-primary" : ""}
+                    `}
+                    >
+                    {card.tag}
+                </span>
+
+                {/* <span className="badge badge-xs badge-warning ml-auto">{card.tag}</span> */}
 
                 <div className='bg bg-base-300 w-10 rounded-full'>
                     <img src={card.icon} alt="" />
@@ -56,7 +67,7 @@ const DisplayCard = ({ card, setCartselected, cartselected }) => {
                                 setSelected(true);
                             }
                         }}
-                        className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-white btn-block">{isSelected === true ? 'added' : 'Buy Now'}</button>
+                        className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-white btn-block">{isSelected === true ? 'Added To Cart' : 'Buy Now'}</button>
                 </div>
             </div>
         </div>
